@@ -15,9 +15,9 @@
 
 	function doOperation(operator,oprand1,operand2) {
 
-		if(arguments.length < 3) {
+		if((arguments.length < 3) || (arguments.length > 3)) {
 			
-			alert('function arguments less than three not allowed');
+			alert('function arguments must be 3 from which first paramter will be operation to perform and other two are numbers on which operation performs.');
 		}
 		else 
 		{
@@ -30,10 +30,23 @@
         			return oprand1 - operand2;
         			break;
     			case "multiply":
-        			return oprand1 * operand2;
+    					if((oprand1 == 0) || (operand2 == 0)) {
+    						return 0;
+    					}
+    					else 
+    					{
+        					return oprand1 * operand2;
+        				}
         			break;
         		case "divide":
-        			return oprand1 / operand2;
+        				if((oprand1 == 0) || (operand2 == 0)) {
+    						return 0;
+    					}
+    					else 
+    					{
+        					return oprand1 / operand2;
+        				}
+        			
         			break;	
     			default:
         			return "Invalid Operation operation must be any one from 'add','subtract','multiply', 'divide'";
