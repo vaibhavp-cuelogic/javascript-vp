@@ -13,6 +13,9 @@
 	var result1 = 0;
 	var invalidResultArr = [];
 
+
+/* Static Paramters Function With Dynamic Arthemetic Operation */
+
 	function doOperation(operator,oprand1,operand2) {
 
 		if((arguments.length < 3) || (arguments.length > 3)) {
@@ -55,6 +58,12 @@
 		}
 
 	}
+
+/* Static Paramters Function With Dynamic Arthemetic Operation */	
+
+
+
+/* Dynamic Paramters Function With Dynamic Arthemetic Operation */
 
 
 	function doOperationDynamic(operation,operands) {
@@ -222,9 +231,4 @@
 		
 	}
 
-
-	//var result = doOperation('add',5,5);
-
-	//var oprRes = doOperationDynamic('add',5,5);
-
-	//console.log(oprRes);
+/* Dynamic Paramters Function With Dynamic Arthemetic Operation */
