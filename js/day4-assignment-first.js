@@ -66,3 +66,50 @@ function mergingTwoObject(obj,src) {
 	
 	console.log(c);
 
+
+/* 
+ 	[Program :: 3]
+ 	Extend number type to have a 'float()' function that will convert any given 'integer' 
+ 	value to its float equivalent. (a no such as 5 should become 5.00) The function should only return 
+ 	that value and should not affect the actual number's value.
+*/
+
+
+	Number.prototype.float = function() {
+
+		return this.valueOf().toFixed(2);
+	}
+
+
+/* 
+ 	[Program :: 4]
+ 	Extend number type to have a 'int()' function that will convert any given 'float' value to its integer 
+ 	equivalent. (a no such as 5.00 should become 5). The function should only return that value and 
+ 	should not affect the actual number's value.
+*/
+	
+	Number.prototype.int = function() {
+
+		return Math.round(this.valueOf());
+	}
+
+
+/* 
+	[Program :: 5]
+	Write a program to loop through the children of a ul element(ul will have 5 li's). 
+	Loop through each of the li and attach a function on it that will alert the value of 
+	that li (html text inside the li). 
+*/
+
+
+var idxOfLi = document.getElementsByTagName("li");
+var countOfLi = idxOfLi.length;
+var i;
+
+for(i= 0; i< countOfLi; i++) {
+	
+	idxOfLi[i].addEventListener("click", function(){
+    	 alert(this.innerText);
+	});	
+} 
+
